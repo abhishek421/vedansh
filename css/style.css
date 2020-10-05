@@ -9306,8 +9306,9 @@ textarea.form-control {
     z-index: -1; }
   .staff .img {
     width: 100%;
-    height: 330px;
+    height: 100px;
     display: block;
+    background-color: #89e2eb;
     background-position: top center;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -9341,7 +9342,7 @@ textarea.form-control {
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    margin-top: -60px; }
+    margin-top: -90px; }
     .staff .text > div {
       width: 100%;
       padding: 0 1em;
@@ -9351,11 +9352,11 @@ textarea.form-control {
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease; }
     .staff .text h3 {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 900;
       margin-bottom: 0;
       line-height: 1.1;
-      color: #fff;
+      color: #0f6674;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
@@ -9379,7 +9380,7 @@ textarea.form-control {
     .staff .ftco-social li a {
       color: #fff; }
   .staff:hover .text h3 {
-    color: #000000; }
+    color: black; }
 
 .ftco-social {
   padding: 0; }
@@ -10047,14 +10048,55 @@ textarea.form-control {
     max-height:100%;
   }
 
-  .industries{
-    width: 50%;
+  .indcard{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
   }
 
-  @media all and (max-width: 767px) {
-    .industries{
-      width: 95%;
-    }
+  .indcard > .img{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .indcard > .img::before{
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    opacity:0.3;
+  }
+
+  .indcard:hover > .img{
+    cursor: default;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  .indcard:hover > .text{
+    cursor: default;
+    color: black;
+    transition: 0.5s;
+  }
+
+  .indcard h3{
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
   }
 
 @-webkit-keyframes loader-rotate {
